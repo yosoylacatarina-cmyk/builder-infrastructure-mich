@@ -35,6 +35,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="mt-12 text-center px-6 pb-12">
+        <h2 className="text-xl font-bold text-white mb-4">Project Roadmap</h2>
+        <p className="text-slate-400">Week 0: Builder Infrastructure ✅</p>
+        <p className="text-slate-400">Week 1: Coming soon...</p>
+      </section>
+      
 
       <footer className="p-6 border-t border-slate-800 text-center text-slate-400">
        Built with Next.js, Tailwind, GitHub, Vercel, and Supabase. | Student: Michelle
