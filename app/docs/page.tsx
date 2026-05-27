@@ -21,4 +21,4 @@ export default function DocsPage() {
     </main>
   );
 // Course: Negocios Inteligentes y Comercio Digital - Verano 2026_B
-// Student: Michelle}
+// Student: Michelle
