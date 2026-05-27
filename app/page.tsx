@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       <footer className="p-6 border-t border-slate-800 text-center text-slate-400">
-        Built with Next.js, Tailwind, GitHub, Vercel, and Supabase.
+       Built with Next.js, Tailwind, GitHub, Vercel, and Supabase. | Student: Michelle
       </footer>
     </main>
   );
