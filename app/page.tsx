@@ -3,9 +3,10 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <nav className="flex items-center justify-between p-6 border-b border-slate-800">
         <h1 className="text-xl font-bold">Builder Infrastructure</h1>
-        <a href="/docs" className="text-blue-400 hover:underline">
-          Docs
-        </a>
+        <div className="flex gap-6">
+  <a href="/core" className="text-blue-400 hover:underline">Core</a>
+  <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
+</div>
       </nav>
 
       <section className="max-w-4xl mx-auto px-6 py-20">
