@@ -39,3 +39,7 @@ https://builder-infrastructure-mich-fg264wnpr-mich-s-projects2.vercel.app
 
 ## Student
 Michelle — Negocios Inteligentes y Comercio Digital, Verano 2026_B
+## Week 1
+- Added /core page: Gym Routine Generator
+- Live URL: https://builder-infrastructure-mich.vercel.app/core
+- Supabase table: core_outputs
