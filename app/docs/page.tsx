@@ -26,7 +26,10 @@ export default function DocsPage() {
         <li className="text-slate-700">Update the /docs page to include a Prompt Library section documenting the prompts used this week.</li>
       </ol>
 
-      <a href="/" className="inline-block mt-4 text-blue-600 underline">
+      <div className="flex gap-6">
+  <a href="/core" className="text-blue-400 hover:underline">Core</a>
+  <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
+</div>
         Back to homepage
       </a>
     </main>
