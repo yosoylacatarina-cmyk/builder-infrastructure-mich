@@ -16,6 +16,21 @@ export default function DocsPage() {
       </ul>
 
       <h2 className="text-2xl font-bold mb-4">Prompt Library</h2>
-      <p className="mb-4 text-slate-600">Prompts used to build the Gym Routine Generator (Wee
+      <p className="mb-4 text-slate-600">
+        Prompts used to build the Gym Routine Generator (Week 1):
+      </p>
+
+      <ol className="list-decimal pl-6 space-y-4 mb-10">
+        <li>Build a /core page in Next.js with Tailwind CSS with an intake form with 3 fields: fitness goal, experience level, and days per week.</li>
+        <li>Add a simulated AI output function that generates a structured weekly gym routine. Label the output card clearly as AI Simulated Output.</li>
+        <li>Create a save button that inserts the routine into a Supabase core_outputs table with title and content fields.</li>
+        <li>Add a dashboard preview section that fetches and displays all saved routines from Supabase.</li>
+        <li>Update the /docs page to include a Prompt Library section documenting the prompts used this week.</li>
+      </ol>
+
+      <a href="/" className="inline-block mt-4 text-blue-600 underline">
+        Back to homepage
+      </a>
+    </main>
   );
 }
