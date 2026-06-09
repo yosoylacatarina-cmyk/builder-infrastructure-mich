@@ -6,6 +6,7 @@ export default function Home() {
         <div className="flex gap-6">
   <a href="/core" className="text-blue-400 hover:underline">Core</a>
   <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
+  <a href="/research" className="text-blue-400 hover:underline">Research</a>
 </div>
       </nav>
 
