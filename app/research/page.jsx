@@ -152,25 +152,15 @@ const [topic, setTopic] = useState('')
           </div>
         </section>
 
-       <div className="flex gap-3 mb-4">
-  <input
-    type="text"
-    value={filter}
-    onChange={e => setFilter(e.target.value)}
-    placeholder="Filter by name, type, or focus..."
-    className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm"
-  />
-
-  <select
-    value={typeFilter}
-    onChange={(e) => setTypeFilter(e.target.value)}
-    className="border border-gray-300 rounded-lg px-3 py-2 text-sm"
-  >
-    <option value="All">All Types</option>
-    <option value="App">App</option>
-    <option value="Platform">Platform</option>
-  </select>
-</div>
+        <section>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">Competitor Analysis</h2>
+          <input
+            type="text"
+            value={filter}
+            onChange={e => setFilter(e.target.value)}
+            placeholder="Filter by name, type, or focus..."
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
             <table className="w-full text-sm">
               <thead className="bg-gray-900 text-white">
