@@ -161,7 +161,8 @@ const [topic, setTopic] = useState('')
             placeholder="Filter by name, type, or focus..."
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+  <div className="bg-white rounded-xl border border-gray-200 overflow-hidden"></div>
             <table className="w-full text-sm">
               <thead className="bg-gray-900 text-white">
                 <tr>
