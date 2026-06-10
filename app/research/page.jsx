@@ -39,7 +39,7 @@ export default function ResearchPage() {
   const [filter, setFilter] = useState('')
   const [topic, setTopic] = useState('')
   const [notes, setNotes] = useState('')
-  const [savedRecords, setSavedRecords] = useState<any>([])
+  const [savedRecords, setSavedRecords] = useState([])
   const [saving, setSaving] = useState(false)
   const [saveMsg, setSaveMsg] = useState('')
 
