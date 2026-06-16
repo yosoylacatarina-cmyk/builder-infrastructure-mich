@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+)
 
 const assumptions = [
   { tier: 'Free', price: '$0/mo', description: 'Basic routine generator only' },
@@ -30,7 +33,10 @@ export default function PricingPage() {
   useEffect(() => { fetchScenarios() }, [])
 
   async function fetchScenarios() {
-    const { data } = await supabase.from('pricing_scenarios').select('*').order('created_at', { ascending: false })
+    const { data } = await supabase
+      .from('pricing_scenarios')
+      .select('*')
+      .order('created_at', { ascending: false })
     if (data) setSavedScenarios(data)
   }
 
@@ -38,13 +44,15 @@ export default function PricingPage() {
     if (!scenarioName.trim()) { setSaveMsg('Please enter a scenario name.'); return }
     setSaving(true)
     setSaveMsg('')
-    const { error } = await supabase.from('pricing_scenarios').insert([{
-      name: scenarioName,
-      free_users: Number(freeUsers),
-      freemium_users: Number(freemiumUsers),
-      pro_users: Number(proUsers),
-      monthly_revenue: monthlyRevenue,
-    }])
+    const { error } = await supabase
+      .from('pricing_scenarios')
+      .insert([{
+        name: scenarioName,
+        free_users: Number(freeUsers),
+        freemium_users: Number(freemiumUsers),
+        pro_users: Number(proUsers),
+        monthly_revenue: monthlyRevenue,
+      }])
     if (error) {
       setSaveMsg('Error saving. Check Supabase connection.')
     } else {
@@ -56,15 +64,17 @@ export default function PricingPage() {
   }
 
   return (
-    <div>
-      <nav>
-        <span>Gym Routine Generator</span>
-        <a href="/">Home</a>
-        <a href="/core">Core</a>
-        <a href="/research">Research</a>
-        <a href="/product">Product</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/docs">Docs</a>
+    <div className="min-h-screen bg-slate-950 text-white">
+      <nav className="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+        <span className="font-bold text-lg">Gym Routine Generator</span>
+        <div className="flex gap-6 text-sm">
+          <a href="/" className="text-slate-400 hover:text-white">Home</a>
+          <a href="/core" className="text-slate-400 hover:text-white">Core</a>
+          <a href="/research" className="text-slate-400 hover:text-white">Research</a>
+          <a href="/product" className="text-slate-400 hover:text-white">Product</a>
+          <a href="/pricing" className="text-blue-400 font-semibold">Pricing</a>
+          <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+        </div>
       </nav>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
@@ -74,6 +84,7 @@ export default function PricingPage() {
           <p className="text-slate-400 mt-1">Week 3 — Model revenue scenarios across Free, Freemium, and Pro tiers.</p>
         </div>
 
+        {/* REVENUE SUMMARY */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-blue-600 rounded-xl p-5">
             <p className="text-sm opacity-80">{isAnnual ? 'Annual' : 'Monthly'} Revenue</p>
@@ -89,6 +100,7 @@ export default function PricingPage() {
           </div>
         </div>
 
+        {/* TOGGLE */}
         <div className="flex items-center gap-4">
           <span className={`text-sm font-medium ${!isAnnual ? 'text-white' : 'text-slate-500'}`}>Monthly</span>
           <button
@@ -101,33 +113,41 @@ export default function PricingPage() {
           {isAnnual && <span className="text-xs bg-green-900 text-green-400 px-2 py-0.5 rounded-full">12x multiplier</span>}
         </div>
 
+        {/* CALCULATOR */}
         <section>
           <h2 className="text-xl font-bold mb-4 text-blue-400">User Distribution</h2>
           <div className="bg-slate-900 rounded-xl border border-slate-800 p-6 space-y-6">
+
             <div>
               <div className="flex justify-between mb-1">
                 <label className="text-sm text-slate-400">Free Users <span className="text-slate-600">($0/mo)</span></label>
                 <span className="text-sm font-bold text-white">{freeUsers}</span>
               </div>
               <input type="range" min="0" max="1000" value={freeUsers}
-                onChange={e => setFreeUsers(e.target.value)} className="w-full" />
+                onChange={e => setFreeUsers(e.target.value)}
+                className="w-full" />
             </div>
+
             <div>
               <div className="flex justify-between mb-1">
                 <label className="text-sm text-slate-400">Freemium Users <span className="text-green-400">($5/mo)</span></label>
                 <span className="text-sm font-bold text-white">{freemiumUsers} → ${(freemiumUsers * 5).toLocaleString()}/mo</span>
               </div>
               <input type="range" min="0" max="500" value={freemiumUsers}
-                onChange={e => setFreemiumUsers(e.target.value)} className="w-full" />
+                onChange={e => setFreemiumUsers(e.target.value)}
+                className="w-full" />
             </div>
+
             <div>
               <div className="flex justify-between mb-1">
                 <label className="text-sm text-slate-400">Pro Users <span className="text-purple-400">($15/mo)</span></label>
                 <span className="text-sm font-bold text-white">{proUsers} → ${(proUsers * 15).toLocaleString()}/mo</span>
               </div>
               <input type="range" min="0" max="200" value={proUsers}
-                onChange={e => setProUsers(e.target.value)} className="w-full" />
+                onChange={e => setProUsers(e.target.value)}
+                className="w-full" />
             </div>
+
             <div className="border-t border-slate-700 pt-4 flex justify-between items-center">
               <span className="text-slate-400">Total {isAnnual ? 'Annual' : 'Monthly'} Revenue</span>
               <span className="text-2xl font-bold text-blue-400">${displayRevenue.toLocaleString()}</span>
@@ -135,6 +155,7 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* ASSUMPTIONS */}
         <section>
           <h2 className="text-xl font-bold mb-4 text-blue-400">Pricing Assumptions</h2>
           <div className="rounded-xl border border-slate-800 overflow-hidden">
@@ -143,7 +164,7 @@ export default function PricingPage() {
                 <tr>
                   <th className="px-4 py-3 text-left text-slate-300">Tier</th>
                   <th className="px-4 py-3 text-left text-slate-300">Price</th>
-                  <th className="px-4 py-3 text-left text-slate-300">{"What's included"}</th>
+                  <th className="px-4 py-3 text-left text-slate-300">What's included</th>
                 </tr>
               </thead>
               <tbody>
@@ -159,6 +180,7 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* SAVE SCENARIO */}
         <section>
           <h2 className="text-xl font-bold mb-4 text-blue-400">Save Scenario</h2>
           <div className="bg-slate-900 rounded-xl border border-slate-800 p-6">
@@ -184,6 +206,7 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* SAVED SCENARIOS */}
         {savedScenarios.length > 0 && (
           <section>
             <h2 className="text-xl font-bold mb-4 text-blue-400">Saved Scenarios</h2>
