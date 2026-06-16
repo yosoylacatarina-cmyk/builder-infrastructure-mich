@@ -50,3 +50,10 @@ Michelle — Negocios Inteligentes y Comercio Digital, Verano 2026_B
 - Research intake form saves records to Supabase `research_records` table
 - Dashboard widget displays all saved research records
 - Live URL: https://builder-infrastructure-mich.vercel.app/research
+
+## Week 3
+
+- Added /product page: Feature map and customer segments
+- Added /pricing page: Interactive revenue simulator
+- Live URLs: builder-infrastructure-mich.vercel.app/product and /pricing
+- Supabase table: pricing_scenarios
