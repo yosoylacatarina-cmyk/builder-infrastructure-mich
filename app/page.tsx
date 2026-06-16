@@ -44,6 +44,9 @@ export default function Home() {
         <p className="text-slate-400">Week 0: Builder Infrastructure (complete) </p>
         <p className="text-slate-400">Week 1: Gym Routine Generator — <a href="/core" className="text-blue-400 underline hover:text-blue-300">Try it →</a></p>
         <p className="text-slate-400">Week 2: Research + Benchmarking — <a href="/research" className="text-blue-400 hover:underline">View →</a></p>
+        <p className="text-slate-400">Week 3: Product Architecture + Pricing — <a href="/product" className="text-blue-400 underline hover:text-blue-300">Product</a> · <a href="/pricing" className="text-blue-400 underline hover:text-blue-300">Pricing</a></p>
+        <p className="text-slate-400">Week 4: Coming soon...</p>
+
         
       </section>
       
