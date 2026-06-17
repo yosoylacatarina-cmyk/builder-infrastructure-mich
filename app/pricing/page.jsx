@@ -65,7 +65,7 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <nav className="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+      <nav className="px-4 py-4 border-b border-slate-800 flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-start md:items-center">
         <span className="font-bold text-lg">Gym Routine Generator</span>
         <div className="flex flex-wrap gap-4 text-sm">
           <a href="/" className="text-slate-400 hover:text-white">Home</a>
