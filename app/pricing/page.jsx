@@ -65,18 +65,17 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <nav className="px-4 py-4 border-b border-slate-800 flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-start md:items-center">
-        <span className="font-bold text-lg">Gym Routine Generator</span>
-        <div className="flex flex-wrap gap-4 text-sm">
-          <a href="/" className="text-slate-400 hover:text-white">Home</a>
-          <a href="/core" className="text-slate-400 hover:text-white">Core</a>
-          <a href="/research" className="text-slate-400 hover:text-white">Research</a>
-          <a href="/product" className="text-slate-400 hover:text-white">Product</a>
-          <a href="/pricing" className="text-blue-400 font-semibold">Pricing</a>
-          <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
-        </div>
-      </nav>
-
+      <nav className="px-4 py-4 border-b border-slate-800 flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-start md:items-center w-full max-w-full overflow-hidden">
+  <span className="font-bold text-lg">Gym Routine Generator</span>
+  <div className="flex gap-4 text-sm overflow-x-auto whitespace-nowrap max-w-full -mx-1 px-1">
+    <a href="/" className="text-slate-400 hover:text-white">Home</a>
+    <a href="/core" className="text-slate-400 hover:text-white">Core</a>
+    <a href="/research" className="text-slate-400 hover:text-white">Research</a>
+    <a href="/product" className="text-slate-400 hover:text-white">Product</a>
+    <a href="/pricing" className="text-blue-400 font-semibold">Pricing</a>
+    <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+  </div>
+</nav>
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
 
         <div>
