@@ -74,7 +74,7 @@ export default function Home() {
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-xl font-bold text-center mb-8 text-slate-300">Project Roadmap</h2>
         <div className="space-y-2 text-center">
-          <p className="text-slate-400">Week 0: Builder Infrastructure GymGen (complete)</p>
+          <p className="text-slate-400">Week 0: Builder Infrastructure "GymGen"</p>
           <p className="text-slate-400">Week 1: Gym Routine Generator — <a href="/core" className="text-emerald-400 underline hover:text-emerald-300">Try it</a></p>
           <p className="text-slate-400">Week 2: Research + Benchmarking — <a href="/research" className="text-emerald-400 underline hover:text-emerald-300">View</a></p>
           <p className="text-slate-400">Week 3: Product + Pricing — <a href="/product" className="text-emerald-400 underline hover:text-emerald-300">Product</a> · <a href="/pricing" className="text-emerald-400 underline hover:text-emerald-300">Pricing</a></p>
