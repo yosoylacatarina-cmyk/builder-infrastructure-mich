@@ -57,3 +57,11 @@ Michelle — Negocios Inteligentes y Comercio Digital, Verano 2026_B
 - Added /pricing page: Interactive revenue simulator
 - Live URLs: builder-infrastructure-mich.vercel.app/product and /pricing
 - Supabase table: pricing_scenarios
+
+## Week 4
+
+- Upgraded homepage: Product landing page with a brand system, target persona, and landing page copy.
+- Added /marketing page: Hub for content cards (10 posts, 3 scripts, 14-day calendar), A/B headline testing, export buttons, and asset saving.
+- Live URLs: https://builder-infrastructure-mich.vercel.app and https://builder-infrastructure-mich.vercel.app/marketing 
+- Supabase table: marketing_assets
+- Testing criteria: Documented 2 A/B tests + 3 software tests within the iteration log.
