@@ -81,6 +81,7 @@ export default function ResearchPage() {
           <a href="/core" className="text-slate-400 hover:text-white">Core</a>
           <a href="/research" className="text-blue-400 font-semibold">Research</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+          <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
         </div>
       </nav>
 
