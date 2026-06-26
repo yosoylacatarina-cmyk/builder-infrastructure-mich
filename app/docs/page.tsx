@@ -26,7 +26,10 @@ export default function DocsPage() {
         <li>Create a save button that inserts the routine into a Supabase core_outputs table with title and content fields.</li>
         <li>Add a dashboard preview section that fetches and displays all saved routines from Supabase.</li>
         <li>Update the /docs page to include a Prompt Library section documenting the prompts used this week.</li>
+        <li>Week 5: Create a /chat page with 3 intake questions, simulated response logic, guardrail response, human checkpoint, thumbs up/down rating, and save session to Supabase chat_sessions table.</li>
       </ol>
+
+      
 
       <a href="/" className="inline-block mt-4 text-blue-600 underline">
         Back to homepage
