@@ -115,6 +115,7 @@ export default function CorePage() {
       <nav className="p-6 border-b border-slate-800 flex justify-between items-center">
         <a href="/" className="font-bold text-white hover:text-blue-400">Builder Infrastructure</a>
         <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
+        <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
       </nav>
 
       <div className="max-w-3xl mx-auto px-6 py-12">
