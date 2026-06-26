@@ -65,3 +65,9 @@ Michelle — Negocios Inteligentes y Comercio Digital, Verano 2026_B
 - Live URLs: https://builder-infrastructure-mich.vercel.app and https://builder-infrastructure-mich.vercel.app/marketing 
 - Supabase table: marketing_assets
 - Testing criteria: Documented 2 A/B tests + 3 software tests within the iteration log.
+
+## Week 5
+
+- Added /chat page: GymGen Fitness Assistant chatbot
+- Live URL: builder-infrastructure-mich.vercel.app/chat
+- Supabase table: chat_sessions
