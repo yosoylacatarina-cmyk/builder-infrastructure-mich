@@ -9,6 +9,7 @@ export default function Home() {
           <a href="/product" className="text-slate-400 hover:text-white">Product</a>
           <a href="/pricing" className="text-slate-400 hover:text-white">Pricing</a>
           <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
+          <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
         </div>
       </nav>
