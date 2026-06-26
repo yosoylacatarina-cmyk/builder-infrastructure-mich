@@ -79,7 +79,8 @@ export default function Home() {
           <p className="text-slate-400">Week 2: Research + Benchmarking — <a href="/research" className="text-emerald-400 underline hover:text-emerald-300">View</a></p>
           <p className="text-slate-400">Week 3: Product + Pricing — <a href="/product" className="text-emerald-400 underline hover:text-emerald-300">Product</a> · <a href="/pricing" className="text-emerald-400 underline hover:text-emerald-300">Pricing</a></p>
           <p className="text-slate-400">Week 4: Marketing Engine — <a href="/marketing" className="text-emerald-400 underline hover:text-emerald-300">Marketing</a></p>
-          <p className="text-slate-400">Week 5: Coming soon...</p>
+          <p className="text-slate-400">Week 5: Public Chatbot - <a href="/chat" className="text-emerald-400 underline hover:text-emerald-300">Chat</a></p>
+           <p className="text-slate-400">Week 6: Coming Soon..
         </div>
       </section>
 
