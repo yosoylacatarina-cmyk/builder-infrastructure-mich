@@ -135,6 +135,7 @@ export default function MarketingPage() {
           <a href="/pricing" className="text-slate-400 hover:text-white">Pricing</a>
           <a href="/marketing" className="text-emerald-400 font-semibold">Marketing</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+          <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
         </div>
       </nav>
 
