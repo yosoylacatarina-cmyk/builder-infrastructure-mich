@@ -147,6 +147,7 @@ export default function ChatPage() {
           <div>
             <h1 className="text-2xl font-bold">GymGen Fitness Assistant</h1>
             <p className="text-slate-400 text-sm">Guided fitness Q&A — <span className="text-yellow-400">AI Simulated Output</span></p>
+            <p className="text-slate-500 text-xs mt-1">💡 Try asking about: rest & recovery, diet & nutrition, cardio, or any fitness question after the 3 intake questions.</p>
           </div>
           <div className="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-center">
             <p className="text-xs text-slate-400">Saved Sessions</p>
