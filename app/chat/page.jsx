@@ -52,7 +52,7 @@ function getFollowUpResponse(message, goal, level, days) {
   if (msg.includes('chest') || msg.includes('push day') || msg.includes('bench')) {
     return `Chest day for a ${level}:\n\n• Bench press 4x8 — main compound lift\n• Incline dumbbell press 3x10 — upper chest\n• Cable flyes 3x12 — chest isolation\n• Tricep dips 3x10 — bonus tricep work\n• Push-ups to failure as a finisher\n\nFocus on form over weight, especially on bench press. [AI Simulated Output]`
   }
-  if (msg.includes('back') || msg.includes('pull day') || msg.includes('lat') || msg.includes('row')) {
+if (msg.includes('back') || msg.includes('pull') || msg.includes('lat') || msg.includes('row')) {
     return `Back day for a ${level}:\n\n• Deadlifts 4x6 — full posterior chain\n• Pull-ups or lat pulldown 3x8\n• Barbell rows 3x10 — mid back thickness\n• Cable rows 3x12 — squeeze at the end\n• Face pulls 3x15 — rear delts and posture\n\nBack is the hardest muscle group to feel — focus on the mind-muscle connection. [AI Simulated Output]`
   }
   if (msg.includes('shoulder') || msg.includes('delt') || msg.includes('overhead')) {
