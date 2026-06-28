@@ -8,7 +8,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 )
 
-const FITNESS_KEYWORDS = ['gym', 'workout', 'exercise', 'muscle', 'weight', 'fitness', 'training', 'routine', 'cardio', 'strength', 'diet', 'nutrition', 'protein', 'rest', 'recovery', 'sets', 'reps', 'goal', 'beginner', 'advanced', 'intermediate', 'days', 'plan', 'body', 'fat', 'calories', 'run', 'lift', 'squat', 'push', 'pull', 'chest', 'back', 'legs', 'arms', 'shoulders', 'core', 'abs']
+const FITNESS_KEYWORDS = ['gym', 'workout', 'exercise', 'muscle', 'weight', 'fitness', 'training', 'routine', 'cardio', 'strength', 'diet', 'nutrition', 'protein', 'rest', 'recovery', 'sets', 'reps', 'goal', 'beginner', 'advanced', 'intermediate', 'days', 'plan', 'body', 'fat', 'calories', 'run', 'lift', 'squat', 'push', 'pull', 'chest', 'back', 'legs', 'arms', 'shoulders', 'core', 'abs', 'stretch', 'flexibility', 'mobility', 'warm', 'cool', 'injury', 'pain', 'sleep', 'hydration', 'water', 'supplement', 'creatine', 'vitamins', 'bulk', 'cut', 'lean', 'tone', 'endurance', 'hiit', 'yoga', 'pilates', 'crossfit', 'powerlifting', 'bodyweight', 'dumbbell', 'barbell', 'kettlebell', 'band', 'machine', 'treadmill', 'bike', 'rowing', 'swimming', 'sport', 'athlete', 'coach', 'trainer', 'gym bag', 'shoes', 'form', 'technique', 'posture', 'breathe', 'motivation', 'plateau', 'progress', 'gains', 'results', 'transformation', 'before', 'after', 'week', 'month', 'schedule', 'split', 'push pull', 'upper', 'lower', 'glutes', 'hamstring', 'quad', 'calf', 'tricep', 'bicep', 'forearm', 'trap', 'lat', 'delts']
 
 const GUARDRAIL_RESPONSE = "I'm GymGen's fitness assistant — I'm only able to help with gym routines, workout plans, and fitness questions. Try asking me something like 'What should I do on leg day?' or 'How many days should a beginner train?'"
 
@@ -44,6 +44,28 @@ function getFollowUpResponse(message, goal, level, days) {
   }
   if (msg.includes('cardio')) {
     return `For your goal (${goal}), cardio should complement your strength training. At ${level} level, 2-3 cardio sessions per week of 20-30 minutes is ideal. Steady-state cardio (walking, cycling) is easiest to recover from. [AI Simulated Output]`
+  }
+  return `Great question! Based on your profile (${goal}, ${level}, ${days} days/week), I'd recommend focusing on consistency above all else. Small improvements each week add up significantly over months. Keep showing up! [AI Simulated Output]`
+  if (msg.includes('leg') || msg.includes('legs') || msg.includes('quad') || msg.includes('hamstring') || msg.includes('glute')) {
+    return `Leg day for a ${level} at your goal (${goal}):\n\n• Squats 4x8 — king of leg exercises\n• Romanian deadlifts 3x10 — hamstrings and glutes\n• Leg press 3x12 — quad focus\n• Walking lunges 3x12 each leg\n• Calf raises 4x15\n\nRest 90 seconds between sets. Leg day is tough — fuel up beforehand! [AI Simulated Output]`
+  }
+  if (msg.includes('chest') || msg.includes('push day') || msg.includes('bench')) {
+    return `Chest day for a ${level}:\n\n• Bench press 4x8 — main compound lift\n• Incline dumbbell press 3x10 — upper chest\n• Cable flyes 3x12 — chest isolation\n• Tricep dips 3x10 — bonus tricep work\n• Push-ups to failure as a finisher\n\nFocus on form over weight, especially on bench press. [AI Simulated Output]`
+  }
+  if (msg.includes('back') || msg.includes('pull day') || msg.includes('lat') || msg.includes('row')) {
+    return `Back day for a ${level}:\n\n• Deadlifts 4x6 — full posterior chain\n• Pull-ups or lat pulldown 3x8\n• Barbell rows 3x10 — mid back thickness\n• Cable rows 3x12 — squeeze at the end\n• Face pulls 3x15 — rear delts and posture\n\nBack is the hardest muscle group to feel — focus on the mind-muscle connection. [AI Simulated Output]`
+  }
+  if (msg.includes('shoulder') || msg.includes('delt') || msg.includes('overhead')) {
+    return `Shoulder day for a ${level}:\n\n• Overhead press 4x8 — main compound\n• Lateral raises 3x12 — side delts width\n• Front raises 3x12 — front delts\n• Rear delt flyes 3x15 — posture and balance\n• Shrugs 3x15 — traps\n\nDon't skip rear delts — most people are front-delt dominant which causes posture issues. [AI Simulated Output]`
+  }
+  if (msg.includes('what should i do') || msg.includes('what to do') || msg.includes('where do i start') || msg.includes('help me')) {
+    return `Based on your profile (${goal}, ${level}, ${days} days/week), here's where to start:\n\n• Go to /core to generate your full personalized routine\n• Follow the plan consistently for at least 4 weeks before changing anything\n• Track your workouts — write down sets, reps, and weight each session\n• Focus on learning proper form before adding weight\n• Show up on the days you planned, even if you don't feel like it\n\nConsistency beats perfection every time. [AI Simulated Output]`
+  }
+  if (msg.includes('arm') || msg.includes('bicep') || msg.includes('tricep') || msg.includes('curl')) {
+    return `Arm day for a ${level}:\n\n• Barbell curls 3x10 — bicep mass\n• Hammer curls 3x12 — brachialis and forearm\n• Skull crushers 3x10 — tricep mass\n• Tricep pushdowns 3x12 — isolation\n• Concentration curls 3x12 — peak contraction\n\nArms respond well to higher volume — don't be afraid to go up to 4-5 exercises. [AI Simulated Output]`
+  }
+  if (msg.includes('leg') || msg.includes('legs') || msg.includes('quad') || msg.includes('hamstring') || msg.includes('glute')) {
+    return `Leg day for a ${level} at your goal (${goal}):\n\n• Squats 4x8 — king of leg exercises\n• Romanian deadlifts 3x10 — hamstrings and glutes\n• Leg press 3x12 — quad focus\n• Walking lunges 3x12 each leg\n• Calf raises 4x15\n\nRest 90 seconds between sets. Leg day is tough — fuel up beforehand! [AI Simulated Output]`
   }
   return `Great question! Based on your profile (${goal}, ${level}, ${days} days/week), I'd recommend focusing on consistency above all else. Small improvements each week add up significantly over months. Keep showing up! [AI Simulated Output]`
 }
