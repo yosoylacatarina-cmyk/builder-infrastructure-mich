@@ -11,6 +11,8 @@ export default function Home() {
           <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
           <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+          <a href="/demo" className="text-slate-400 hover:text-white">Demo</a>
+          <a href="/dashboard" className="text-slate-400 hover:text-white">Dashboard</a>
         </div>
       </nav>
 
