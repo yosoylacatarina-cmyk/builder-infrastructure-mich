@@ -116,6 +116,12 @@ export default function CorePage() {
         <a href="/" className="font-bold text-white hover:text-blue-400">Builder Infrastructure</a>
         <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
         <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
+         <a href="/research" className="text-slate-400 hover:text-white">Research</a>
+          <a href="/product" className="text-slate-400 hover:text-white">Product</a>
+          <a href="/pricing" className="text-slate-400 hover:text-white">Pricing</a>
+          <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
+          <a href="/demo" className="text-slate-400 hover:text-white">Demo</a>
+          <a href="/dashboard" className="text-slate-400 hover:text-white">Dashboard</a>
       </nav>
 
       <div className="max-w-3xl mx-auto px-6 py-12">
