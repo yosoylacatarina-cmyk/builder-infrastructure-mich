@@ -114,7 +114,7 @@ export default function CorePage() {
     <main className="min-h-screen bg-slate-950 text-white">
       <nav className="p-6 border-b border-slate-800 flex justify-between items-center">
         <a href="/" className="font-bold text-white hover:text-blue-400">Builder Infrastructure</a>
-        <a href="/docs" className="text-blue-400 hover:underline">Docs</a>
+        <a href="/core" className="text-blue-400 hover:underline">Core</a>
         <a href="/docs" className="text-slate-400 hover:underline">Docs</a>
         <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
          <a href="/research" className="text-slate-400 hover:text-white">Research</a>
