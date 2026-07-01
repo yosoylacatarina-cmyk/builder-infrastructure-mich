@@ -17,18 +17,17 @@ export default function DocsPage() {
 
       <h2 className="text-2xl font-bold mb-4">Prompt Library</h2>
       <p className="mb-4 text-slate-600">
-        Prompts used to build the Gym Routine Generator (Week 1):
+        Prompts used to build GymGen:
       </p>
 
       <ol className="list-decimal pl-6 space-y-4 mb-10">
-        <li>Build a /core page in Next.js with Tailwind CSS with an intake form with 3 fields: fitness goal, experience level, and days per week.</li>
-        <li>Add a simulated AI output function that generates a structured weekly gym routine. Label the output card clearly as AI Simulated Output.</li>
-        <li>Create a save button that inserts the routine into a Supabase core_outputs table with title and content fields.</li>
-        <li>Add a dashboard preview section that fetches and displays all saved routines from Supabase.</li>
-        <li>Update the /docs page to include a Prompt Library section documenting the prompts used this week.</li>
-        <li>Week 5: Create a /chat page with 3 intake questions, simulated response logic, guardrail response, human checkpoint, thumbs up/down rating, and save session to Supabase chat_sessions table.</li>
-      </ol>
-
+  <li>Week 1: Build a /core page with intake form, simulated AI output, save to Supabase core_outputs, and dashboard preview.</li>
+  <li>Week 2: Build a /research page with competitor table, filter/search, 5 global benchmarks, Mexico localization, risk map, and save research records to Supabase.</li>
+  <li>Week 3: Build /product page with feature map and customer segments. Build /pricing page with revenue calculator, monthly/annual toggle, assumptions table, and save scenarios to Supabase.</li>
+  <li>Week 4: Upgrade homepage with GymGen branding. Build /marketing page with brand system, persona, 10 social posts, 3 video scripts, 14-day calendar, A/B tester, and save assets to Supabase.</li>
+  <li>Week 5: Build /chat page with 3 intake questions, simulated response logic, guardrail, human checkpoint, thumbs up/down rating, and save sessions to Supabase.</li>
+  <li>Week 6: Build /demo with guided walkthrough, agent map, impact check, and v2 roadmap. Build /dashboard reading from all 5 Supabase tables simultaneously.</li>
+</ol>
       
 
       <a href="/" className="inline-block mt-4 text-blue-600 underline">
