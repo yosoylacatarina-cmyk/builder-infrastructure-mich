@@ -79,7 +79,10 @@ export default function ProductPage() {
           <a href="/research" className="text-slate-400 hover:text-white">Research</a>
           <a href="/product" className="text-blue-400 font-semibold">Product</a>
           <a href="/pricing" className="text-slate-400 hover:text-white">Pricing</a>
+          <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+          <a href="/demo" className="text-slate-400 hover:text-white">Demo</a>
+          <a href="/dashboard" className="text-slate-400 hover:text-white">Dashboard</a>
           <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
         </div>
       </nav>
