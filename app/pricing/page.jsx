@@ -74,6 +74,10 @@ export default function PricingPage() {
     <a href="/product" className="text-slate-400 hover:text-white">Product</a>
     <a href="/pricing" className="text-blue-400 font-semibold">Pricing</a>
     <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
+    <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
+    <a href="/demo" className="text-slate-400 hover:text-white">Demo</a>
+    <a href="/dashboard" className="text-slate-400 hover:text-white">Dashboard</a>
+    <a href="/chat" className="text-slate-400 hover:text-white">Chat</a>
   </div>
 </nav>
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
