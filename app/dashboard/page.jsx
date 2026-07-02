@@ -22,12 +22,11 @@ export default function DashboardPage() {
     async function fetchAll() {
       setLoading(true)
       const [core, research, pricing, marketing, chat] = await Promise.all([
-        supabase.from('core_outputs').select('*').order('created_at', { ascending: false }).limit(3),
-        supabase.from('research_records').select('*').order('created_at', { ascending: false }).limit(3),
-        supabase.from('pricing_scenarios').select('*').order('created_at', { ascending: false }).limit(3),
-        supabase.from('marketing_assets').select('*').order('created_at', { ascending: false }).limit(3),
-        supabase.from('chat_sessions').select('*').order('created_at', { ascending: false }).limit(3),
-      ])
+supabase.from('core_outputs').select('*').order('created_at', { ascending: false }),
+supabase.from('research_records').select('*').order('created_at', { ascending: false }),
+supabase.from('pricing_scenarios').select('*').order('created_at', { ascending: false }),
+supabase.from('marketing_assets').select('*').order('created_at', { ascending: false }),
+supabase.from('chat_sessions').select('*').order('created_at', { ascending: false }),
       setData({
         core_outputs: core.data || [],
         research_records: research.data || [],
