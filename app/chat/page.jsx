@@ -155,8 +155,8 @@ export default function ChatPage() {
           <a href="/pricing" className="text-slate-400 hover:text-white">Pricing</a>
           <a href="/marketing" className="text-slate-400 hover:text-white">Marketing</a>
           <a href="/chat" className="text-emerald-400 font-semibold">Chat</a>
-          <a href="/demo" className="text-slate-400 font-semibold">Demo</a>
-          <a href="/dashboard" className="text-slate-400 font-semibold">Dashboard</a>
+          <a href="/demo" className="text-slate-400 hover:text-white">Demo</a>
+          <a href="/dashboard" className="text-slate-400 hover:text-white">Dashboard</a>
           <a href="/docs" className="text-slate-400 hover:text-white">Docs</a>
         </div>
       </nav>
