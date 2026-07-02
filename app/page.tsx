@@ -73,6 +73,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT TO DO NEXT */}
+<section className="max-w-4xl mx-auto px-6 py-8">
+  <h2 className="text-xl font-bold text-center mb-6 text-slate-300">Where do you want to start?</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {[
+      { emoji: '🏋️', title: 'Get a workout plan', desc: 'Tell us your goal and we build your routine', link: '/core', cta: 'Generate Routine' },
+      { emoji: '💬', title: 'Ask a fitness question', desc: 'Chat with our guided fitness assistant', link: '/chat', cta: 'Open Chat' },
+      { emoji: '💰', title: 'Explore pricing', desc: 'See what plan fits your needs', link: '/pricing', cta: 'View Pricing' },
+    ].map(item => (
+      <div key={item.title} className="bg-slate-900 rounded-xl border border-slate-800 p-5 text-center">
+        <div className="text-3xl mb-2">{item.emoji}</div>
+        <h3 className="font-bold text-white mb-1">{item.title}</h3>
+        <p className="text-sm text-slate-400 mb-4">{item.desc}</p>
+        <a href={item.link} className="inline-block bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold px-4 py-2 rounded-lg transition">
+          {item.cta}
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
+
       {/* PROJECT ROADMAP */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-xl font-bold text-center mb-8 text-slate-300">Project Roadmap</h2>
